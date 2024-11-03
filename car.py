@@ -56,6 +56,7 @@ def track_follow(frame):
     # Track the line using edges and simple control
     # (Add more logic for real-time track following based on contours)
     if not obstacle_detected:
+        print("Following the track")
         motor_left.forward(speed)
         motor_right.forward(speed)
     else:
