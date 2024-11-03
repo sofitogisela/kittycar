@@ -39,7 +39,7 @@ def detect_obstacle(frame):
     mask_val = cv2.countNonZero(mask)
 
     print(f"Mask value: {mask_val}")
-    obstacle = mask_val > 500  # Threshold for obstacle detection
+    obstacle = mask_val > 20000  # Threshold for obstacle detection
     if obstacle:
         obstacle_detected = True
         motor_left.stop()
