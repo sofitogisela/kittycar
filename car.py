@@ -35,7 +35,11 @@ def detect_obstacle(frame):
     lower_orange = (10, 100, 100)
     upper_orange = (25, 255, 255)
     mask = cv2.inRange(hsv, lower_orange, upper_orange)
-    obstacle = cv2.countNonZero(mask) > 500  # Threshold for obstacle detection
+    
+    mask_val = cv2.countNonZero(mask)
+
+    print(f"Mask value: {mask_val}")
+    obstacle = mask_val > 500  # Threshold for obstacle detection
     if obstacle:
         obstacle_detected = True
         motor_left.stop()
