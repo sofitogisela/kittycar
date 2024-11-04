@@ -14,3 +14,8 @@ time.sleep(2)
 
 motor_left.stop()
 motor_right.stop()
+
+# test led
+stop_led.on()
+time.sleep(2)
+stop_led.off()
